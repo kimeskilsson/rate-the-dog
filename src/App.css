@@ -1,0 +1,1840 @@
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+@font-face {
+  font-family: 'GoodDogNew';
+  src: url('fonts/.547.otf');
+}
+
+.font-goodDogNew {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+@media (min-resolution: 120dpi) {
+  .font-goodDogNew {
+    font-family: 'GoodDogNew', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  }
+}
+
+.App { /* Base font style */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.8500);
+  background-color: #f6f6f6;
+}
+
+.App .baseFont * { /* Base font style override for UI framework components */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+}
+
+.App .appBg {
+  background-color: #f6f6f6;
+}
+
+.App .cardBg {
+  background-color: white;
+}
+
+.App .baseTextBg { /* Base text color as background */
+  background-color: rgba(0, 0, 0, 0.8500);
+}
+
+.App .secondaryTextColor {
+  color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .secondaryTextBg {
+  background-color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .primaryTextColor {
+  color: #bee9ee;
+}
+
+.App .primaryBg {
+  background-color: #bee9ee;
+}
+
+.App .highlightTextColor {
+  color: #0093d5;
+}
+
+.App .highlightBg {
+  background-color: #0093d5;
+}
+
+/* Styles to customize the UI framework plugin (MUI, https://muicss.com) */
+.mui-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn--primary {
+    background-color: #bee9ee;
+}
+.mui-btn--primary:active, .mui-btn--primary:focus, .mui-btn--primary:hover {
+    background-color: #c3ebf0;
+}
+.mui-btn--accent {
+    background-color: #0093d5;
+}
+.mui-btn--accent:active, .mui-btn--accent:focus, .mui-btn--accent:hover {
+    background-color: #069fda;
+}
+.mui-textfield {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-checkbox, .mui-radio {  /* Reset UI framework styling that affects layout */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-select {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn+.mui-btn {  /* Reset UI framework styling that affects layout */
+    margin-left: 0;
+}
+.mui-btn--fab {  /* Reset UI framework styling that breaks compositing */
+    z-index: auto;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes slideIn_right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideIn_bottom {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* App-wide text styles specified in React Studio */
+.App .actionFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+.App .actionFont * {
+  font-size: 14.2px;
+}
+.App .headlineFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 19.4px;
+  font-weight: 400;
+}
+.App .headlineFont * {
+  font-size: 19.4px;
+}
+.App .navBar {
+  background-color: #bee9ee;
+  color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 63px;
+  min-height: 63px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+.App .navBar a {
+  color: black;
+}
+
+.App .navBar .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin-top: 13px;
+}
+
+.App .navBar .backBtn {
+  position: absolute;
+  padding: 4px;
+  margin-left: 14px;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .mui-container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 568px) {
+  .mui-container {
+    max-width: 568px;
+  }
+}
+@media (min-width: 768px) {
+  .mui-container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .mui-container {
+    max-width: 1024px;
+  }
+}
+
+.AppScreen {
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.App .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App .layoutFlow {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+.App .layoutFlow:before {  /* Prevent margin collapse */
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .layoutFlow .flowRow {
+  position: relative;
+  width: 100%;
+}
+
+.App .screenFgContainer {
+  /* Items in the foreground group within a screen are placed with fixed positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.App .foreground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App ul {
+  margin: 0;
+  padding: 0;
+}
+.App li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+.App .hasNestedComps {
+  position: relative;
+}
+.App .hasNestedComps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .hasNestedComps .background {
+  position: absolute;
+}
+.App .hasNestedComps .layoutFlow {
+  position: relative;
+}
+.App .bottomAlignedContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.App .blockInputOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+  z-index: 99999999;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .ReviewDogsScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .ReviewDogsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .ReviewDogsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .ReviewDogsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .ReviewDogsScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 78px;
+    width: 324px;
+    margin-left: calc(49.6% - 162px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elImage > * { 
+  width: 324px;
+  height: 272px;
+  }
+  
+@media (min-width: 568px) {
+  .ReviewDogsScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 36px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elImage > * { 
+  width: 453px;
+  height: 272px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ReviewDogsScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 94px;
+    width: 676px;
+    margin-left: calc(49.4% - 338px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elImage > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .ReviewDogsScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 121px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elImage > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .ReviewDogsScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 0px;
+    width: 234px;
+    margin-left: calc(50.0% - 117px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elRating > * { 
+  width: 234px;
+  height: 80px;
+  }
+  
+@media (min-width: 568px) {
+  .ReviewDogsScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: -3px;
+    width: 234px;
+    margin-left: calc(50.5% - 117px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elRating > * { 
+  width: 234px;
+  height: 80px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ReviewDogsScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 23px;
+    width: 232px;
+    margin-left: calc(50.3% - 116px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elRating > * { 
+  width: 232px;
+  height: 80px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .ReviewDogsScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 0px;
+    width: 232px;
+    margin-left: calc(50.0% - 116px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elRating > * { 
+  width: 232px;
+  height: 80px;
+  }
+  
+}
+
+.ReviewDogsScreen .elButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .ReviewDogsScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 0px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elButton > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .ReviewDogsScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: -3px;
+    width: 145px;
+    margin-left: calc(50.5% - 72px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elButton > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ReviewDogsScreen > .layoutFlow > .elButton {
+    line-height: 34px;
+    position: relative;
+    margin-top: 23px;
+    width: 224px;
+    margin-left: calc(50.3% - 112px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elButton > * { 
+  width: 224px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .ReviewDogsScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 0px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .ReviewDogsScreen > .layoutFlow > .elButton > * { 
+  width: 144px;
+  }
+  
+}
+
+.ReviewDogsScreen .elButton2 {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.ReviewDogsScreen .elButton2:focus {
+  box-shadow: 0 0 6px rgba(0, 149, 214, 0.2500);
+  outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .ReviewDogsScreen > .screenFgContainer > .foreground > .elButton2 {
+    line-height: 35px;
+    position: absolute;
+    left: calc(0.0% + 0px);
+    top: 0px;
+    width: 145px;
+    height: 35px;
+  }
+@media (min-width: 568px) {
+  .ReviewDogsScreen > .screenFgContainer > .foreground > .elButton2 {
+    line-height: 35px;
+    left: calc(0.0% + 23px);
+    top: 0px;
+    width: 145px;
+    height: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .ReviewDogsScreen > .screenFgContainer > .foreground > .elButton2 {
+    line-height: 35px;
+    left: calc(0.0% + 0px);
+    top: 0px;
+    width: 144px;
+    height: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .ReviewDogsScreen > .screenFgContainer > .foreground > .elButton2 {
+    line-height: 35px;
+    left: calc(0.0% + 0px);
+    top: 34px;
+    width: 144px;
+    height: 35px;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+.DOGSTOREVIEWScreen .elComp2 {
+  overflow: hidden;
+}
+
+.DOGSTOREVIEWScreen .elComp2.hasNestedComps > div {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 {
+    position: relative;
+    margin-top: 0px;
+    width: 320px;
+    margin-left: calc(50.0% - 160px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > * { 
+  width: 320px;
+  }
+  
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > .background > .containerMinHeight {
+    min-height: 213px;
+  }
+
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 {
+    position: relative;
+    margin-top: 0px;
+    width: 320px;
+    margin-left: calc(50.0% - 160px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > * { 
+  width: 320px;
+  }
+  
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > .background > .containerMinHeight {
+    min-height: 213px;
+  }
+
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 {
+    position: relative;
+    margin-top: 0px;
+    width: 318px;
+    margin-left: calc(50.0% - 159px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > * { 
+  width: 318px;
+  }
+  
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > .background > .containerMinHeight {
+    min-height: 213px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 {
+    position: relative;
+    margin-top: 0px;
+    width: 318px;
+    margin-left: calc(50.0% - 159px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > * { 
+  width: 318px;
+  }
+  
+  .DOGSTOREVIEWScreen > .layoutFlow > .elComp2 > .background > .containerMinHeight {
+    min-height: 213px;
+  }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 46px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImage > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 50px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 50px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 50px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 21px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButton > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy {
+    position: relative;
+    margin-top: 22px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButtonCopy button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 {
+    position: relative;
+    margin-top: 22px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy2 > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButtonCopy2 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy2 > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 {
+    position: relative;
+    margin-top: 22px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy3 > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButtonCopy3 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy3 > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 {
+    position: relative;
+    margin-top: 22px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy4 > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButtonCopy4 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy4 > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 {
+    position: relative;
+    margin-top: 22px;
+    width: 324px;
+    margin-left: calc(50.0% - 162px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 > * { 
+  width: 324px;
+  height: 276px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 {
+    position: relative;
+    margin-top: 22px;
+    width: 453px;
+    margin-left: calc(50.0% - 226px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 > * { 
+  width: 453px;
+  height: 276px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 {
+    position: relative;
+    margin-top: 22px;
+    width: 676px;
+    margin-left: calc(50.0% - 338px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 > * { 
+  width: 676px;
+  height: 406px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 {
+    position: relative;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: calc(50.0% - 450px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elImageCopy5 > * { 
+  width: 900px;
+  height: 450px;
+  }
+  
+}
+
+.DOGSTOREVIEWScreen .elButtonCopy5 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 > * { 
+  width: 145px;
+  }
+  
+@media (min-width: 568px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 145px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 > * { 
+  width: 145px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 > * { 
+  width: 144px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 56px;
+    width: 144px;
+    margin-left: calc(50.0% - 72px);
+  }
+  .DOGSTOREVIEWScreen > .layoutFlow > .elButtonCopy5 > * { 
+  width: 144px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+.LoginScreen .elFab button {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.LoginScreen .elFab button:focus {
+  box-shadow: 0 0 6px rgba(0, 149, 214, 0.2500);
+  outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginScreen > .layoutFlow > .elFab {
+    line-height: 68px;
+    position: relative;
+    margin-top: 0px;
+    width: 68px;
+    margin-left: 0.0%;
+  }
+  .LoginScreen > .layoutFlow > .elFab > * { 
+  width: 68px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginScreen > .layoutFlow > .elFab {
+    line-height: 68px;
+    position: relative;
+    margin-top: 0px;
+    width: 68px;
+    margin-left: 0.0%;
+  }
+  .LoginScreen > .layoutFlow > .elFab > * { 
+  width: 68px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginScreen > .layoutFlow > .elFab {
+    line-height: 68px;
+    position: relative;
+    margin-top: 0px;
+    width: 68px;
+    margin-left: calc(0.0% + 9px);
+  }
+  .LoginScreen > .layoutFlow > .elFab > * { 
+  width: 68px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginScreen > .layoutFlow > .elFab {
+    line-height: 68px;
+    position: relative;
+    margin-top: 0px;
+    width: 68px;
+    margin-left: 0.0%;
+  }
+  .LoginScreen > .layoutFlow > .elFab > * { 
+  width: 68px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 149px;
+    width: 317px;
+    margin-left: calc(50.0% - 159px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 317px;
+  height: 231px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: -2px;
+    width: 317px;
+    margin-left: calc(50.2% - 159px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 317px;
+  height: 231px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 288px;
+    width: 430px;
+    margin-left: calc(50.0% - 215px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 430px;
+  height: 324px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 148px;
+    width: 315px;
+    margin-left: calc(50.0% - 158px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 315px;
+  height: 230px;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .Comp2 {
+    min-height: 280px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 323px */
+    height: 100%;
+  }
+  .Comp2 > .background > .containerMinHeight {
+    min-height: 280px;
+  }
+
+
+  .Comp2 > .foreground > .elText {
+    overflow: hidden;
+    position: absolute;
+    left: calc(50.0% + 0px - 159px);
+    top: 188px;
+    width: 317px;
+    height: 26px;
+  }
+
+
+  .Comp2 > .foreground > .elDoggo1 {
+    position: absolute;
+    left: calc(50.0% + 0px - 69px);
+    top: 0px;
+    width: 138px;
+    height: 178px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .StartPageScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+.StartPageScreen .elComp {
+  overflow: hidden;
+}
+
+.StartPageScreen .elComp.hasNestedComps > div {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 3px;
+    width: 322px;
+    margin-left: calc(50.0% - 161px);
+  }
+  .StartPageScreen > .layoutFlow > .elComp > * { 
+  width: 322px;
+  }
+  
+  .StartPageScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 280px;
+  }
+
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 3px;
+    width: 272px;
+    margin-left: calc(50.0% - 136px);
+  }
+  .StartPageScreen > .layoutFlow > .elComp > * { 
+  width: 272px;
+  }
+  
+  .StartPageScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 280px;
+  }
+
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 3px;
+    width: 320px;
+    margin-left: calc(50.0% - 160px);
+  }
+  .StartPageScreen > .layoutFlow > .elComp > * { 
+  width: 320px;
+  }
+  
+  .StartPageScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 278px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 3px;
+    width: 320px;
+    margin-left: calc(50.0% - 160px);
+  }
+  .StartPageScreen > .layoutFlow > .elComp > * { 
+  width: 320px;
+  }
+  
+  .StartPageScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 278px;
+  }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .layoutFlow > .elDoggo {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .StartPageScreen > .layoutFlow > .elDoggo > * { 
+    width: 100%;
+  height: 548px;
+  }
+  
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elDoggo {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .StartPageScreen > .layoutFlow > .elDoggo > * { 
+    width: 100%;
+  height: 548px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elDoggo {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .StartPageScreen > .layoutFlow > .elDoggo > * { 
+    width: 100%;
+  height: 545px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elDoggo {
+    position: relative;
+    margin-top: -0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .StartPageScreen > .layoutFlow > .elDoggo > * { 
+    width: 100%;
+  height: 545px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .layoutFlow > .elImage2 {
+    position: relative;
+    margin-top: -596px;
+    width: 312px;
+    margin-left: calc(50.3% - 156px);
+  }
+  .StartPageScreen > .layoutFlow > .elImage2 > * { 
+  width: 312px;
+  height: 149px;
+  }
+  
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elImage2 {
+    position: relative;
+    margin-top: -550px;
+    width: 312px;
+    margin-left: calc(49.8% - 156px);
+  }
+  .StartPageScreen > .layoutFlow > .elImage2 > * { 
+  width: 312px;
+  height: 149px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elImage2 {
+    position: relative;
+    margin-top: -592px;
+    width: 413px;
+    margin-left: calc(50.0% - 206px);
+  }
+  .StartPageScreen > .layoutFlow > .elImage2 > * { 
+  width: 413px;
+  height: 220px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elImage2 {
+    position: relative;
+    margin-top: -590px;
+    width: 512px;
+    margin-left: calc(50.0% - 256px);
+  }
+  .StartPageScreen > .layoutFlow > .elImage2 > * { 
+  width: 512px;
+  height: 284px;
+  }
+  
+}
+
+.StartPageScreen .elButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartPageScreen > .layoutFlow > .elButton {
+    line-height: 42px;
+    position: relative;
+    margin-top: 20px;
+    width: 172px;
+    margin-left: calc(51.3% - 86px);
+  }
+  .StartPageScreen > .layoutFlow > .elButton > * { 
+  width: 172px;
+  }
+  
+@media (min-width: 568px) {
+  .StartPageScreen > .layoutFlow > .elButton {
+    line-height: 42px;
+    position: relative;
+    margin-top: 20px;
+    width: 172px;
+    margin-left: calc(50.8% - 86px);
+  }
+  .StartPageScreen > .layoutFlow > .elButton > * { 
+  width: 172px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartPageScreen > .layoutFlow > .elButton {
+    line-height: 41px;
+    position: relative;
+    margin-top: 20px;
+    width: 171px;
+    margin-left: calc(50.6% - 85px);
+  }
+  .StartPageScreen > .layoutFlow > .elButton > * { 
+  width: 171px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartPageScreen > .layoutFlow > .elButton {
+    line-height: 41px;
+    position: relative;
+    margin-top: 42px;
+    width: 171px;
+    margin-left: calc(49.7% - 85px);
+  }
+  .StartPageScreen > .layoutFlow > .elButton > * { 
+  width: 171px;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .StarOn {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOn > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOn .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOn .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2125);
+  outline: none;
+}
+
+
+
+  .StarOn > .foreground > .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+/* This component has a fixed-size layout */
+  .StarOff {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOff > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOff .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOff .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2125);
+  outline: none;
+}
+
+
+
+  .StarOff > .foreground > .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
