@@ -2,7 +2,7 @@
   "name": "rate-the-dog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/kimeskilsson/rate-the-dog",
+  "homepage": "https://kimeskilsson.github.io/rate-the-dog/",
   "dependencies": {
     "muicss": "^0.9.41",
     "react": "^16.8.6",
